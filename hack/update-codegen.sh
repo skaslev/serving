@@ -79,5 +79,13 @@ ${GOPATH}/bin/deepcopy-gen \
   -i knative.dev/serving/pkg/metrics \
   -i knative.dev/serving/pkg/network
 
+# Generate CRD validation schema, needs to execute at project root.
+cd "${REPO_ROOT_DIR}"
+# go install ${REPO_ROOT_DIR}/vendor/sigs.k8s.io/controller-tools/cmd/controller-gen
+${GOPATH}/bin/controller-gen \
+  schemapatch:manifests=config/core/resources-test2,maxDescLen=0 \
+  output:dir=config/core/resources-test2 \
+  paths=./pkg/apis/...
+
 # Make sure our dependencies are up-to-date
 ${REPO_ROOT_DIR}/hack/update-deps.sh
