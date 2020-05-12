@@ -28,6 +28,7 @@ import (
 // +genclient
 // +genreconciler
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
+// +k8s:openapi-gen=true
 
 // ServerlessService is a proxy for the K8s service objects containing the
 // endpoints for the revision, whether those are endpoints of the activator or

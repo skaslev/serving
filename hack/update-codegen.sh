@@ -79,5 +79,7 @@ ${GOPATH}/bin/deepcopy-gen \
   -i knative.dev/serving/pkg/metrics \
   -i knative.dev/serving/pkg/network
 
+# openapi-gen -i knative.dev/serving/pkg/apis/autoscaling/v1alpha1,knative.dev/serving/pkg/apis/networking/v1alpha1/,knative.dev/serving/pkg/apis/serving/v1alpha1/,knative.dev/serving/pkg/apis/serving/v1beta1/,knative.dev/serving/pkg/apis/serving/v1,knative.dev/pkg/apis,knative.dev/pkg/apis/duck/v1alpha1,knative.dev/pkg/apis/duck/v1beta1,knative.dev/pkg/apis/duck/v1  -o ./tmp -p generated -O openapi-generated --go-header-file hack/boilerplate/boilerplate.go.txt 
+
 # Make sure our dependencies are up-to-date
 ${REPO_ROOT_DIR}/hack/update-deps.sh

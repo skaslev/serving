@@ -129,6 +129,14 @@ func (u *URL) ResolveReference(ref *URL) *URL {
 	return &ret
 }
 
+func (_ *URL) OpenAPISchemaType() []string {
+	return []string{"string"}
+}
+
+func (_ *URL) OpenAPISchemaFormat() string {
+	return ""
+}
+
 func init() {
 	equality.Semantic.AddFunc(
 		// url.URL has an unexported type (UserInfo) which causes semantic

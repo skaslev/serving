@@ -42,6 +42,14 @@ func (t *VolatileTime) UnmarshalJSON(b []byte) error {
 	return t.Inner.UnmarshalJSON(b)
 }
 
+func (_ *VolatileTime) OpenAPISchemaType() []string {
+	return []string{"string"}
+}
+
+func (_ *VolatileTime) OpenAPISchemaFormat() string {
+	return "date-time"
+}
+
 func init() {
 	equality.Semantic.AddFunc(
 		// Always treat VolatileTime fields as equivalent.

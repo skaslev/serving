@@ -26,6 +26,7 @@ import (
 
 // +genclient
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
+// +k8s:openapi-gen=true
 
 // Service acts as a top-level container that manages a set of Routes and
 // Configurations which implement a network service. Service exists to provide a

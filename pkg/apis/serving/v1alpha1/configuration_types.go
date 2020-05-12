@@ -27,6 +27,7 @@ import (
 // +genclient
 // +genreconciler
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
+// +k8s:openapi-gen=true
 
 // Configuration represents the "floating HEAD" of a linear history of Revisions,
 // and optionally how the containers those revisions reference are built.

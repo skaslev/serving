@@ -26,6 +26,7 @@ import (
 
 // +genclient
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
+// +k8s:openapi-gen=true
 
 // Route is responsible for configuring ingress over a collection of Revisions.
 // Some of the Revisions a Route distributes traffic over may be specified by

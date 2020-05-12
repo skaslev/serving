@@ -27,6 +27,7 @@ import (
 // +genclient
 // +genreconciler
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
+// +k8s:openapi-gen=true
 
 // Revision is an immutable snapshot of code and configuration.  A revision
 // references a container image. Revisions are created by updates to a

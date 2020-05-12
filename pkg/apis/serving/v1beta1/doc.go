@@ -19,5 +19,6 @@ limitations under the License.
 // of the same resource
 
 // +k8s:deepcopy-gen=package
+// +k8s:openapi-gen=true
 // +groupName=serving.knative.dev
 package v1beta1

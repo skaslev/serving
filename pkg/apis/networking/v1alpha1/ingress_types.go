@@ -27,6 +27,7 @@ import (
 // +genclient
 // +genreconciler
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
+// +k8s:openapi-gen=true
 
 // Ingress is a collection of rules that allow inbound connections to reach the endpoints defined
 // by a backend. An Ingress can be configured to give services externally-reachable URLs, load
